@@ -4,8 +4,12 @@ import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.Spinner
 import androidx.appcompat.app.AppCompatActivity
+import com.example.cadastro.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var amb: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
 
         val spinnerUf: Spinner = findViewById(R.id.ufS)
@@ -18,6 +22,7 @@ class MainActivity : AppCompatActivity() {
         spinnerUf.adapter = adapter
 
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        amb = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(amb.root)
     }
 }
