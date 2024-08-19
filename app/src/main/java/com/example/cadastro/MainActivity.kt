@@ -11,6 +11,9 @@ class MainActivity : AppCompatActivity() {
     private lateinit var amb: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        amb = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(amb.root)
 
         val spinnerUf: Spinner = findViewById(R.id.ufS)
 
@@ -21,8 +24,6 @@ class MainActivity : AppCompatActivity() {
 
         spinnerUf.adapter = adapter
 
-        super.onCreate(savedInstanceState)
-        amb = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(amb.root)
+
     }
 }
