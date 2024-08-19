@@ -38,6 +38,11 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this@MainActivity, "Formulário limpo com sucesso", Toast.LENGTH_SHORT).show()
         }
 
+        amb.btSave.setOnClickListener{
+            var response_form = Form(amb.nameEt.text.toString(), amb.phoneEt.text.toString(), amb.emailEt.text.toString(), amb.emailCb.isChecked, amb.genderRG.toString(), amb.cityEt.text.toString(), amb.ufS.toString())
+            Toast.makeText(this@MainActivity, "Formulário salvo com sucesso $response_form", Toast.LENGTH_SHORT).show()
+        }
+
 
 
 
