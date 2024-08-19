@@ -15,14 +15,11 @@ class MainActivity : AppCompatActivity() {
         amb = ActivityMainBinding.inflate(layoutInflater)
         setContentView(amb.root)
 
-        val spinnerUf: Spinner = findViewById(R.id.ufS)
-
         val ufs = resources.getStringArray(R.array.ufsList)
-
         val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, ufs)
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
 
-        spinnerUf.adapter = adapter
+        amb.ufS.adapter = adapter
 
 
     }
