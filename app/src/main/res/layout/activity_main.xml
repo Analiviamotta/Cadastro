@@ -8,13 +8,213 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/title_header"
+        android:text="@string/app_name"
+
+        android:textSize="25sp"
+        android:textAlignment="textStart"
+        android:padding="16dp"
+
+        android:textColor="@color/purple_text"
+        android:background="@color/purple_background"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/nameTv"
+        android:text="@string/name"
+
+        android:textColor="@color/black"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toBottomOf="@id/title_header" />
+    <EditText
+        android:id="@+id/nameEt"
+        android:inputType="text"
+        android:labelFor="@id/nameTv"
+
+        android:textColor="@color/black"
+        android:background="@android:drawable/edit_text"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/name_placeholder"
+
+        app:layout_constraintTop_toBottomOf="@id/nameTv" />
+
+
+    <TextView
+        android:id="@+id/phoneTv"
+        android:text="@string/phone"
+
+        android:textColor="@color/black"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toBottomOf="@id/nameEt" />
+    <EditText
+        android:id="@+id/phoneEt"
+        android:inputType="phone"
+        android:hint="@string/phone_placeholder"
+        android:labelFor="@id/phoneTv"
+
+        android:textColor="@color/black"
+        android:background="@android:drawable/edit_text"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toBottomOf="@id/phoneTv" />
+
+
+    <TextView
+        android:id="@+id/emailTv"
+        android:text="@string/email"
+
+        android:textColor="@color/black"
+
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toBottomOf="@id/phoneEt" />
+    <EditText
+        android:id="@+id/emailEt"
+        android:inputType="textEmailAddress"
+        android:labelFor="@id/emailTv"
+
+        android:textColor="@color/black"
+        android:background="@android:drawable/edit_text"
+
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:hint="@string/email_placeholder"
+
+        app:layout_constraintTop_toBottomOf="@id/emailTv" />
+
+
+    <CheckBox
+        android:id="@+id/emailCb"
+        android:text="@string/emailCbText"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+
+        app:layout_constraintTop_toBottomOf="@id/emailEt"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+
+
+    <TextView
+        android:id="@+id/genderTv"
+        android:text="@string/gender"
+
+        android:textColor="@color/black"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toBottomOf="@id/emailCb" />
+
+    <RadioGroup
+        android:id="@+id/genderRG"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+
+        app:layout_constraintTop_toBottomOf="@id/genderTv"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <RadioButton
+            android:text="@string/genderFemale"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <RadioButton
+            android:text="@string/genderMen"
+
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RadioGroup>
+
+        <TextView
+            android:id="@+id/cityTv"
+            android:text="@string/city"
+
+            android:textColor="@color/black"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintTop_toBottomOf="@id/genderRG" />
+        <EditText
+            android:id="@+id/cityEt"
+            android:inputType="text"
+            android:labelFor="@id/cityTv"
+
+            android:textColor="@color/black"
+            android:background="@android:drawable/edit_text"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/city_placeholder"
+
+            app:layout_constraintTop_toBottomOf="@id/cityTv" />
+
+    <TextView
+        android:id="@+id/ufTv"
+        android:text="@string/uf"
+
+        android:textColor="@color/black"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toBottomOf="@id/cityEt" />
+    <Spinner
+        android:id="@+id/ufS"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="50dp"
+
+        app:layout_constraintTop_toBottomOf="@id/ufTv" />
+
+    <Button
+        android:id="@+id/clearBt"
+        android:text="@string/clear"
+
+        android:paddingHorizontal="70dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btSave"
+        android:text="@string/save"
+
+        android:paddingHorizontal="70dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,3 +1,37 @@
 <resources>
     <string name="app_name">Cadastro</string>
+    <string name="name">Nome Completo</string>
+    <string name="phone">Telefone</string>
+    <string name="phone_placeholder">(12) 93456-7890</string>
+    <string name="email">E-mail</string>
+    <string name="emailCbText">Ingressar na lista de e-mails?</string>
+    <string name="gender">Sexo</string>
+    <string name="genderMen">Masculino</string>
+    <string name="genderFemale">Feminino</string>
+    <string name="city">Cidade</string>
+    <string name="uf">UF</string>
+    <string name="name_placeholder">Digite o nome completo</string>
+    <string name="email_placeholder">Digite o endereço de e-mail</string>
+    <string name="city_placeholder">Digite o nome da cidade</string>
+    <string name="clear">Limpar</string>
+    <string name="save">Salvar</string>
+
+    <string-array name="ufsList">
+        <item>TO</item>
+        <item>AL</item>
+        <item>AM</item>
+        <item>AP</item>
+        <item>BA</item>
+        <item>MG</item>
+        <item>MS</item>
+        <item>MT</item>
+        <item>PA</item>
+        <item>PB</item>
+        <item>PE</item>
+        <item>PI</item>
+        <item>PR</item>
+        <item>RJ</item>
+        <item>SP</item>
+
+    </string-array>
 </resources>
